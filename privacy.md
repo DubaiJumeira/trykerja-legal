@@ -15,7 +15,7 @@ Last updated: 5 October 2026.
 
 ## The short version
 
-- **Your position never leaves your phone.** Location is used on the phone only, to centre the map and show distances. We never store it or send it anywhere.
+- **We never store or send your position.** Location is used on the phone only, to centre the map and show distances. When the map shows your area, Mapbox delivers the map images for it.
 - **Check-ins are café-level.** When you check in, other members see your name at that café until you check out, or for 3 hours at most.
 - **No selling, no ads, no tracking** across other apps or websites.
 - **Crash reports and statistics are anonymous:** no IP address, no location, no account ID.
@@ -35,7 +35,7 @@ We collect only what the app needs to sign you in and show who is at which café
 | Crash reports | The app, when it fails | To fix bugs |
 | Usage statistics | The app: one event when you sign in | To count sign-ins by method |
 
-**Location.** Kerja asks for your location only when you tap the locate button on the map, and only while the app is open. Your position stays in the phone's memory: it centres the map, places your dot and gives distances to cafés. Kerja never stores it and never sends it to us or anyone else. A check-in sends only the café you chose.
+**Location.** Kerja asks for your location only when you tap the locate button on the map, and only while the app is open. Your position stays in the phone's memory: it centres the map, places your dot and gives distances to cafés. Kerja never stores it and never sends it to us or anyone else. A check-in sends only the café you chose. When the map shows the area around you, Mapbox delivers the map images for that area; it sees the area, not your position.
 
 **Sign-in codes.** We keep only a scrambled form of each code, and it expires after one hour. There are no passwords.
 
@@ -47,7 +47,7 @@ We collect only what the app needs to sign you in and show who is at which café
 
 Other members see you only while you are checked in at a café.
 
-- **While checked in:** signed-in members see you in that café's count and its "Who's here" list, with your name (or "Kerja member" if we have none). This ends when you check out, or after 3 hours.
+- **While checked in:** signed-in members see you in that café's count and its "Who's here" list, with your name (or "Kerja member" if we have none). Their apps also receive a random member ID, which isn't shown. This ends when you check out, or after 3 hours.
 - **Only you see** your email, your check-in history and your account details.
 - **Get directions** opens Google Maps with the café's location; Google's own policy applies there.
 
@@ -60,12 +60,12 @@ These companies process data for us, each only for the job below. We don't sell 
 | Supabase | Database and sign-in | Your account data and check-ins; your IP address with each request |
 | Resend | Sends sign-in code emails | Your email address and the code |
 | Apple | Sign in with Apple; TestFlight during the beta | Your sign-in; testers' feedback |
-| Google | Sign in with Google | Your sign-in |
+| Google | Sign in with Google; reCAPTCHA on the website's contact form | Your sign-in |
 | Sentry | Crash reports | What failed, device model, system version, app version; IP address removed, no location, no account ID |
 | PostHog | Usage statistics | One sign-in event with a random ID, device model, system version, app version, language, timezone; IP address discarded |
 | Mapbox | Map images | Your IP address and the map area on screen; an anonymous usage count. Mapbox telemetry is off |
 | Expo | App updates | A random install ID, platform, app version, your IP address |
-| GoDaddy | Hosts trykerja.com | Website visits (see Website) |
+| GoDaddy | Hosts trykerja.com | Website visits, contact-form messages and email-list sign-ups (see Website) |
 | ImprovMX | Forwards mail to hello@trykerja.com | The emails you send us |
 
 **Mapbox's own setting.** The map's (i) button includes Mapbox's telemetry choice. Kerja turns telemetry off; if you turn it on there, Mapbox collects data under its own privacy policy, and Kerja turns it off again the next time the app starts. Kerja never asks you to turn it on.
@@ -110,7 +110,7 @@ You can delete everything we hold about you from inside the app.
 
 **Security.** Your sign-in on the phone is encrypted, with its key in the phone's secure storage. Data travels encrypted, and database rules let each person read only what they're allowed to see.
 
-**Website.** trykerja.com is hosted by GoDaddy. Its cookie banner asks to set cookies that measure traffic; GoDaddy's own privacy policy covers them. This policy itself is published at legal.trykerja.com, hosted by GitHub Pages, which receives visitors' IP addresses.
+**Website.** trykerja.com is hosted by GoDaddy. Its contact form collects your name, email address and message, which GoDaddy stores and forwards to us; if you tick its box, you also join our email list for updates and promotions, and you can unsubscribe at any time. Google's reCAPTCHA protects the form. We keep form messages as long as needed to answer you, and list sign-ups until you unsubscribe. The cookie banner lets you accept or decline cookies that measure traffic; GoDaddy's own privacy policy covers them. This policy itself is published at legal.trykerja.com, hosted by GitHub Pages, which receives visitors' IP addresses.
 
 **Changes.** We update this page whenever the app starts collecting something new, for example when profiles, photos or messages arrive. The date at the top shows the last change, and we announce important changes in the app.
 
