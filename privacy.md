@@ -11,7 +11,7 @@ Kerja is a professional networking app for digital nomads, starting in Canggu, B
 
 Kerja is run by Zayd Benhacine, an independent developer ("Kerja", "we"). We are responsible for your personal data. Contact us at hello@trykerja.com.
 
-Last updated: 8 October 2026.
+Last updated: 11 October 2026.
 
 ## The short version
 
@@ -19,15 +19,16 @@ Last updated: 8 October 2026.
 - **Your profile is for members.** Signed-in members can see your profile. People you've blocked, and people who blocked you, can't.
 - **Check-ins are café-level; areas are neighbourhood-level.** When you check in, other members see you at that café until you check out, for 3 hours at most and never past closing time. If you say you're around an area today (for example Berawa), members see you there until midnight in Bali, and we delete it at 00:05. We delete each check-in 90 days after it ends.
 - **Requests you send are stored** so the other person can answer: the reason, your optional note and, if you choose, a café to meet at.
+- **Chats are only between the two of you.** Once a request is accepted, you can message each other. Nobody else sees your messages, unless one of you reports a message to us, and Kerja never shows when you've read a message, when you're typing or whether you're online.
 - **To keep Kerja safe,** our server refuses certain words, and we keep reports and bans as described below, even after an account is deleted.
-- **Notifications never contain what people write to you.** They're off until you turn them on.
+- **Notifications never contain what people write to you.** They only say who did what, for example "New message from Maya". They're off until you turn them on.
 - **No selling, no ads, no tracking** across other apps or websites.
 - **Crash reports and statistics are anonymous:** no IP address, no location, no account ID.
-- **You can delete your account in the app** (Me → Settings → Delete account). It removes your data from our database and photo storage at once, except reports and bans, which we keep for safety as described below.
+- **You can delete your account in the app** (Me → Settings → Delete account). It removes your data from our database and photo storage at once, including every message you sent. The people you chatted with keep only their own messages. Reports and bans are kept for safety, as described below.
 
 ## What we collect and why
 
-We collect only what the app needs to sign you in, show your profile to other members, show who is at which café or around which area, pass on your requests, and keep members safe.
+We collect only what the app needs to sign you in, show your profile to other members, show who is at which café or around which area, pass on your requests and messages, and keep members safe.
 
 | Data | Where it comes from | Why |
 |---|---|---|
@@ -38,12 +39,15 @@ We collect only what the app needs to sign you in, show your profile to other me
 | Optional profile sections | You: what you're building, what you need right now, up to three things you can help with, and your answers to up to two questions from our list | To show other members more about you and suggest people to meet |
 | Profile photo (optional) | You: the one photo you choose, stored in two sizes | To show other members who you are |
 | Privacy choices and blocks | You | To apply them |
-| Notification token (optional) | Your phone, if you turn notifications on | To send you notifications |
+| Notification token (optional) | Your phone, if you turn notifications on, with the sign-in session it belongs to | To send you notifications, only while that session is open |
 | Google profile picture link | Google, with your sign-in | Received from Google; not shown in the app |
 | Check-ins | You: the café, when you checked in and out | To show who is at a café now |
 | Area for the day (optional) | You: one area (Batu Bolong, Canggu, Berawa or Pererenan) and, if you choose, what you're up for (coffee, co-work or collab). Our server sets the day and the time | To show who is around an area today |
-| Connection requests | You: who you send it to, the reason, an optional note of up to 300 characters, the café you suggest if you turn on "Coffee here?", and the time | To let the other person answer you, and to limit requests to 10 a day |
-| Reports | You, if you report someone: the reason, an optional note, whether you also blocked them, and the time | To review reports and keep members safe |
+| Connection requests | You: who you send it to, the reason, an optional note of up to 300 characters, the café you suggest if you turn on "Coffee here?", when you sent it, and when it was answered | To let the other person answer you, and to limit requests to 10 a day |
+| Chats | You and the member you connected with: who is in the chat, which request started it, and each message's text (up to 1,000 characters), sender and time | To let you talk with members you've connected with |
+| Read positions | Your app, when you open a chat: the time up to which you've read it | To show you which chats are unread, and the Inbox's count |
+| Notification queue | Our server: who a notification is for, the other member, what happened (a request, an acceptance or a message), which request or chat it's about, and when it was queued and sent | To send each notification once, group messages, and skip chats you've already read |
+| Reports | You, if you report someone: the reason, an optional note, whether you also blocked them, and the time; for a report from a chat, a copy of the reported message, or of the reported member's last 10 messages in that chat | To review reports and keep members safe |
 | Acceptance of the terms of use | Your account: which version of the terms you accepted, and when | To record your agreement |
 | Sign-in sessions | Your phone: IP address and device type, per signed-in device | To keep you signed in and protect your account |
 | Crash reports | The app, when it fails | To fix bugs |
@@ -55,27 +59,30 @@ We collect only what the app needs to sign you in, show your profile to other me
 
 **Suggestions.** "People to meet today" and the good fits Kerja highlights are worked out on your phone, from profiles members can already see. Nothing about them is sent to us. Your phone remembers the last 7 days' suggestions (member IDs and dates only) so it doesn't repeat them, and deletes them when you sign out or delete your account.
 
+**Chats.** You can message a member once one of you has accepted the other's request. A chat and its messages are visible only to its two members, and to us only through a report (see Reports and bans). Each member's read position is kept for that member only, to show what's unread: Kerja has no read receipts, no typing indicator and no online status. "Not now" on a request is private: the sender is never told, and the request keeps showing as "Pending" to them. If either of you blocks the other, the chat disappears for both of you at once, and unblocking doesn't bring it back; connecting again does, with its earlier messages. If a member is banned, their chats are hidden from everyone.
+
 **Words we refuse.** Our server refuses names, headlines, Instagram usernames, profile sections, request notes and the other texts members write when they contain words on our list (slurs, sexual insults, profanity, sexual solicitation, harassment, hate, scams and illegal gambling). Chat messages follow the same list, except ordinary swear words. A refused text is neither stored nor logged. If the name Apple or Google gives us is refused, we don't store it, and you type your own.
 
-**Reports and bans.** When you report someone, we keep the report: the reason, your note, whether you blocked them and the time, and, to know who was reported, their name and headline at that moment and scrambled fingerprints (SHA-256) of their email addresses and Apple or Google sign-in identifiers. We keep a report even if either account is deleted, and delete it one year after we close it. Each report sends us an email alert through Resend with the report's number, reason and time, whether the reporter also blocked the person, and which of our two databases it came from. It never contains names or the note. If we ban a member, we keep the same fingerprints for as long as the ban lasts, even after their account is deleted, so that the same email address or Apple or Google sign-in can't open a new account. A banned member is hidden from everyone.
+**Reports and bans.** When you report someone, we keep the report: the reason, your note, whether you blocked them and the time, and, to know who was reported, their name and headline at that moment and scrambled fingerprints (SHA-256) of their email addresses and Apple or Google sign-in identifiers. When you report someone from a chat, our server also keeps a copy of the message you reported, or of that member's last 10 messages in the chat, with their times; never your own messages. We keep a report and its copies even if either account is deleted, and delete them one year after we close the report. Each report sends us an email alert through Resend with the report's number, reason and time, whether the reporter also blocked the person, and which of our two databases it came from. It never contains names or the note. If we ban a member, we keep the same fingerprints for as long as the ban lasts, even after their account is deleted, so that the same email address or Apple or Google sign-in can't open a new account. A banned member is hidden from everyone.
 
-**Notifications.** Kerja never asks at launch, and works without them. If you turn them on in Kerja, your phone gives Kerja a notification token, a code that lets us reach that phone; we keep it until you sign out or delete your account. Notifications go through Expo, which passes them to Apple or Google, and they never contain the text of a message or a note someone wrote to you. Only Kerja's server can send them: Expo refuses any request without Kerja's private key. You can turn them off at any time in your phone's settings.
+**Notifications.** Kerja never asks at launch, and works without them. If you turn them on in Kerja, your phone gives Kerja a notification token, a code that lets us reach that phone, stored with the sign-in session it belongs to. A token is never used once its session has ended, and we delete it within a day; otherwise we keep it until you sign out or delete your account. Kerja's server sends three kinds of notification, each naming the other member: "Maya wants to connect", "Maya accepted your request" and "New message from Maya". They never contain the text of a message or a note. Messages are grouped: at most one notification per chat every 5 minutes, and none once you've read the chat. Nothing is sent between members who have blocked each other, or to or about a banned member, and a notification goes to at most your 4 most recently used phones. To send them, our server keeps a queue (see the table above): a notification not sent within 15 minutes is never sent, and every entry is deleted within 25 hours. Notifications go through Expo, which passes them to Apple or Google; we keep Expo's answers (counts and error codes, never content) for 6 hours. Only Kerja's server can send them: Expo refuses any request without Kerja's private key. You can turn them off at any time in your phone's settings.
 
 **Sign-in codes.** We keep only a scrambled form of each code, and it expires after one hour. There are no passwords.
 
 **What we don't collect.** No contacts, access to your photo library, camera, microphone, advertising ID or cross-app tracking.
 
-**Legal bases (EU and UK):** providing the service you asked for (account, profile, photo, check-ins, areas, requests); our legitimate interests (keeping members safe through the word filter, reports and bans; security; crash reports; statistics); your consent (location and notification permissions); and recording your acceptance of our terms.
+**Legal bases (EU and UK):** providing the service you asked for (account, profile, photo, check-ins, areas, requests, chats); our legitimate interests (keeping members safe through the word filter, reports and bans; security; crash reports; statistics); your consent (location and notification permissions); and recording your acceptance of our terms.
 
 ## What other members see
 
 - **Your profile, at any time:** signed-in members can see your name, photo, headline, what you do, what you're looking for, your city and the date you're there until, your portfolio link and your Instagram username, what you're building, what you need right now, what you can help with and your answers to questions, and when your profile was created and last updated. Their apps also receive your random member ID and three account flags (LinkedIn verified, work email verified and Pro); none of these is shown, and the flags are always off for now. Kerja doesn't check that an Instagram username belongs to the person who entered it.
 - **At a café:** while you're checked in, members see you there: on the map as your photo or initial (up to three people per café, then a number), and in the café's "Who's here" with your name, headline, what you do and what you're looking for. With "Show me in who's here" off, you count at the café as a blank circle, never with your name or photo. With "Show which café I'm at" off, you aren't shown or counted at any café. Their apps also receive when you checked in and when your check-in ends. This ends when you check out, after 3 hours, or at the café's closing time.
 - **Around an area:** if you say you're around an area today, members see you around it, on the map and in People, with your name, photo, headline, what you do, what you're looking for and what you're up for, plus a count of people around it. The same switches apply: with "Show which café I'm at" off, you can't choose an area; with "Show me in who's here" off, you're counted but never listed. If you're checked in at a café, you show only at the café. This ends when you tap "Stop for today", or at midnight in Bali.
-- **Your requests:** the person you send a request to sees who it's from, the reason, your note and any café you suggested, in their Inbox (arriving in a later update). Nobody else sees it.
+- **Your requests:** the person you send a request to sees who it's from, the reason, your note and any café you suggested, in their Inbox. Nobody else sees it. If they tap "Not now", you aren't told.
+- **Your messages:** only the member you're chatting with sees them, with when you sent them. They never see when you've read their messages, when you're typing or whether you're online. If you delete your account, they keep only the messages they sent you, under "This member left Kerja", without your name or photo.
 - **Your next city and its date:** only members you're connected with, and only while "Share my next city and dates" is on.
-- **Blocks:** you and the person you block see nothing of each other. Only you see the people you've blocked, with the date, in Blocked members.
-- **Only you see** your email, your check-in history, your requests' history, your privacy choices and your account details.
+- **Blocks:** you and the person you block see nothing of each other, and your chat disappears for both of you. Only you see the people you've blocked, with the date, in Blocked members.
+- **Only you see** your email, your check-in history, your requests' history, where you've read up to in each chat, your privacy choices and your account details.
 - **Get directions** opens Google Maps with the café's location, and **Open in Instagram** opens Instagram; their own policies apply there.
 
 ## Service providers
@@ -84,7 +91,7 @@ These companies process data for us, each only for the job below. We don't sell 
 
 | Provider | Job | What it receives |
 |---|---|---|
-| Supabase | Database, photo storage and sign-in | Your account, profile, photos, check-ins, areas, requests, reports, ban fingerprints and notification tokens; your IP address with each request |
+| Supabase | Database, photo storage and sign-in | Your account, profile, photos, check-ins, areas, requests, chats and messages, read positions, reports, ban fingerprints, notification tokens and the notification queue; your IP address with each request |
 | Resend | Sends sign-in code emails, and report alerts to us | Your email address and the code; for a report, its number, reason and time, and whether the reporter blocked the person |
 | Apple | Sign in with Apple; notifications to iPhones; TestFlight during the beta | Your sign-in; your phone's notification token and each notification's title and text; testers' feedback; your IP address |
 | Google | Sign in with Google; notifications to Android phones (Firebase Cloud Messaging); reCAPTCHA on the website's contact form | Your sign-in; on Android phones, a Firebase installation ID, your phone's notification token and each notification's title and text; your IP address |
@@ -116,11 +123,15 @@ Your account, profile and settings stay until you delete your account; check-ins
 | Check-in history | 90 days after each check-in ends |
 | Area for the day | Until you tap "Stop for today", or 00:05 Bali time the next day |
 | Connection requests | Until the sender or the recipient deletes their account |
+| Chats and messages | Your messages: until you delete your account. A chat goes once both its members have deleted their accounts; a chat hidden by a block goes when either account is deleted |
+| Read positions | As long as the chat they belong to |
+| Notification queue | Up to 25 hours |
+| Expo's answers to our server (counts and error codes) | 6 hours |
 | Acceptance of the terms of use | Until you delete your account |
-| Reports | One year after we close them, even if either account is deleted |
+| Reports, with any copies of reported messages | One year after we close them, even if either account is deleted |
 | Ban fingerprints | As long as the ban lasts, even after the account is deleted |
 | Suggestions remembered on your phone | 7 days; deleted at sign-out or when you delete your account |
-| Notification tokens | Until you sign out or delete your account |
+| Notification tokens | Until you sign out or delete your account, or within a day after their sign-in session ends |
 | Sign-in sessions | Until you sign out or delete your account |
 | Sign-in codes | 1 hour |
 | Supabase service logs (with IP addresses) | Up to 7 days |
@@ -136,7 +147,7 @@ You can change your profile, photo and privacy choices, or delete your account a
 - **Privacy:** Me → Settings → Privacy, to hide which café you're at or the area you're around, leave "Who's here", stop sharing your next city, and see the people you've blocked.
 - **Your area for the day:** tap your area at the bottom of the map, then "Stop for today".
 - **Notifications:** Me → Settings → Notifications, or your phone's settings.
-- **Delete your account:** Me → Settings → Delete account. Your account, profile, photos, privacy choices, blocks, check-ins, area, requests, acceptance of the terms, notification tokens and sign-in sessions are removed from our database and photo storage at once. Reports and ban fingerprints are kept for safety, as described above. Service logs expire within 7 days; crash reports and statistics aren't linked to your account and expire as above.
+- **Delete your account:** Me → Settings → Delete account. Your account, profile, photos, privacy choices, blocks, check-ins, area, requests, every message you sent, your read positions, acceptance of the terms, notification tokens and sign-in sessions are removed from our database and photo storage at once. In each of your chats, the other member keeps only the messages they sent, read-only, under "This member left Kerja", with no name or photo of you; a chat where they wrote nothing is deleted at once. Reports, with any copies of reported messages, and ban fingerprints are kept for safety, as described above. Service logs expire within 7 days; crash reports and statistics aren't linked to your account and expire as above.
 - **Sign out:** Me → Settings → Sign out. This signs you out on all your devices, removes their notification tokens, and clears the suggestions your phone remembers.
 - **Apple or Google sign-in:** you can also remove Kerja's access in your Apple ID or Google account settings.
 - **Location:** allow or refuse it in your phone's settings at any time. The app works without it.
@@ -151,6 +162,6 @@ You can change your profile, photo and privacy choices, or delete your account a
 
 **Website.** trykerja.com is hosted by GoDaddy. Its contact form collects your name, email address and message, which GoDaddy stores and forwards to us; if you tick its box, you also join our email list for updates and promotions, and you can unsubscribe at any time. Google's reCAPTCHA protects the form. We keep form messages as long as needed to answer you, and list sign-ups until you unsubscribe. The cookie banner lets you accept or decline cookies that measure traffic; GoDaddy's own privacy policy covers them. This policy itself is published at legal.trykerja.com, hosted by GitHub Pages, which receives visitors' IP addresses.
 
-**Changes.** We update this page whenever the app starts collecting something new, for example when messages arrive. The date at the top shows the last change, and from version 1.0.2 the app tells you when it changes.
+**Changes.** We update this page whenever the app starts collecting something new. The date at the top shows the last change, and from version 1.0.2 the app tells you when it changes.
 
 **Contact.** hello@trykerja.com
