@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- comment -%}
+  Title, canonical and meta tags written out the way jekyll-seo-tag 2.8.0 writes them today
+  ("Page title | Site title", canonical = absolute_url of page.url), without its JSON-LD
+  block: these pages carry no script at all.
+{%- endcomment -%}
+{%- if site.title and page.title and page.title != site.title -%}
+  {%- capture seo_title -%}{{ page.title }} | {{ site.title }}{%- endcapture -%}
+{%- else -%}
+  {%- assign seo_title = page.title | default: site.title -%}
+{%- endif -%}
+{%- assign seo_page_title = page.title | default: site.title -%}
+{%- assign seo_url = page.url | absolute_url %}
+<title>{{ seo_title | escape }}</title>
+<meta name="generator" content="Jekyll v{{ jekyll.version }}">
+<meta property="og:title" content="{{ seo_page_title | escape }}">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="{{ seo_url }}">
+<meta property="og:url" content="{{ seo_url }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="{{ seo_page_title | escape }}">
+<link rel="stylesheet" href="/assets/kerja.css">
+{% if content contains "<h1" or content contains "<h2" or content contains "<h3" -%}
+<link rel="preload" href="/assets/fonts/bricolage-display.woff2" as="font" type="font/woff2" crossorigin>
+{% endif -%}
+<link rel="preload" href="/assets/fonts/jakarta-400.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="logo" href="https://trykerja.com/"><img src="/assets/logo.svg" alt="Kerja home" width="102" height="40"></a>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<div class="wrap prose">
+{{ content }}
+</div>
+</main>
+<footer class="foot">
+  <ul class="wrap foot-in">
+    <li><a class="foot-link" href="mailto:hello@trykerja.com">hello@trykerja.com</a></li>
+    <li><a class="foot-link" href="/privacy/"{% if page.url == "/privacy/" %} aria-current="page"{% endif %}>Privacy</a></li>
+    <li><a class="foot-link" href="/terms/"{% if page.url == "/terms/" %} aria-current="page"{% endif %}>Terms</a></li>
+  </ul>
+</footer>
+</body>
+</html>
