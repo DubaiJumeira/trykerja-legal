@@ -1,0 +1,157 @@
+/* Kerja's look for legal.trykerja.com: the calm text page of trykerja.com (Our promise).
+   Phone first. Colours are defined once, here, from the app's src/theme/tokens.ts.
+   No script, no request to any other site: fonts are self-hosted (Latin subsets, OFL). */
+:root {
+  --cream: #FBF4E4;         /* cream: the page */
+  --sand: #F3E6CF;          /* creamDeep: code */
+  --white: #FFFFFF;         /* white: table cells */
+  --ink: #1D1A14;           /* ink: headlines, strong, table heads */
+  --ink-2: #3D372D;         /* ink2: body text */
+  --orange-shadow: #C23F06; /* orangeShadow: text links (4.8:1 on cream) */
+  --hairline: #E3D9C6;      /* hairline: borders */
+  --dot: #E3D3B4;           /* quoteMark: the small sand dot of the lists */
+
+  --font-head: "Bricolage", system-ui, sans-serif;
+  --font-body: "Jakarta", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --bar-h: 64px;
+}
+
+/* Bricolage 800 = Display (opsz 96); Jakarta 400 and 700. */
+@font-face { font-family: "Bricolage"; src: url("fonts/bricolage-display.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jakarta"; src: url("fonts/jakarta-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Jakarta"; src: url("fonts/jakarta-700.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%; text-size-adjust: 100%;
+  background: var(--cream);
+  scroll-padding-top: calc(var(--bar-h) + 16px);
+}
+body {
+  margin: 0; min-height: 100vh; min-height: 100svh;
+  display: flex; flex-direction: column;
+  background: var(--cream); color: var(--ink);
+  font: 400 17px/27px var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; height: auto; }
+
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+a:focus-visible { border-radius: 6px; }
+
+.skip {
+  position: absolute; left: 12px; top: -200px; z-index: 100;
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px;
+  border-radius: 999px; background: var(--ink); color: var(--cream);
+  font: 700 16px/1 var(--font-body); text-decoration: none;
+}
+.skip:focus { top: 10px; }
+
+/* The text column: 20 px from the edges on phones, about 680 px wide and centred on desktop. */
+.wrap { width: min(100% - 40px, 680px); margin-inline: auto; }
+
+/* ---------- Top bar ---------- */
+.bar { position: sticky; top: 0; z-index: 30; background: var(--cream); box-shadow: 0 1px 0 var(--hairline); }
+.bar-in { height: var(--bar-h); display: flex; align-items: center; }
+.logo { display: flex; align-items: center; min-height: 44px; min-width: 44px; border-radius: 8px; }
+.logo img { height: 34px; width: auto; }
+
+/* ---------- The policy ---------- */
+main { display: block; flex: 1 0 auto; padding: 40px 0 0; }
+main:focus { outline: none; }
+
+.prose { color: var(--ink-2); overflow-wrap: break-word; }
+.prose > * { margin: 0; }
+.prose > * + * { margin-top: 16px; }
+
+.prose h1, .prose h2, .prose h3 { color: var(--ink); font-family: var(--font-head); font-weight: 800; text-wrap: balance; }
+.prose h1 { font-size: 40px; line-height: 44px; letter-spacing: -.035em; }
+.prose h2 { font-size: 26px; line-height: 31px; letter-spacing: -.03em; }
+.prose h3 { font-size: 21px; line-height: 26px; letter-spacing: -.02em; }
+.prose > h1 + * { margin-top: 20px; }
+.prose > * + h2 { margin-top: 48px; }
+.prose > * + h3 { margin-top: 32px; }
+.prose > h2 + *, .prose > h3 + * { margin-top: 12px; }
+
+.prose strong, .prose b { font-weight: 700; color: var(--ink); }
+
+.prose a {
+  color: var(--orange-shadow);
+  text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+}
+.prose a:hover { text-decoration-thickness: 2px; }
+
+/* Lists: the website's small sand dots. */
+.prose ul, .prose ol { padding: 0; }
+.prose ul { list-style: none; }
+.prose ol { padding-left: 1.5em; }
+.prose li + li { margin-top: 10px; }
+.prose ul > li { position: relative; padding-left: 20px; }
+.prose ul > li::before {
+  content: ""; position: absolute; left: 0; top: 10px;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--dot);
+}
+.prose li > ul, .prose li > ol { margin-top: 10px; }
+
+/* Tables scroll sideways inside their own box; the page itself never does. */
+.prose table {
+  display: block; max-width: 100%; overflow-x: auto;
+  border: 1px solid var(--hairline); border-radius: 16px;
+  border-collapse: separate; border-spacing: 0;
+  background: var(--white);
+  font-size: 15px; line-height: 22px;
+}
+/* Columns keep about 20 characters a line on phones (the first, label column less), so a
+   two-column table still fits at 390 px. */
+.prose th, .prose td {
+  min-width: 180px; padding: 12px 14px;
+  text-align: left; vertical-align: top;
+  border-bottom: 1px solid var(--hairline);
+}
+.prose th:first-child, .prose td:first-child { min-width: 116px; }
+.prose th + th, .prose td + td { border-left: 1px solid var(--hairline); }
+/* Heads on cream, not sand: a link there keeps orangeShadow's 4.8:1. */
+.prose thead th { background: var(--cream); color: var(--ink); font-weight: 700; }
+.prose tbody tr:last-child td { border-bottom: 0; }
+
+/* Quiet code and quotes. */
+.prose code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .88em;
+  padding: .1em .35em; border-radius: 6px; background: var(--sand); color: var(--ink);
+}
+.prose pre { overflow-x: auto; padding: 14px 16px; border-radius: 12px; background: var(--sand); font-size: 14px; line-height: 21px; }
+.prose pre code { padding: 0; background: none; font-size: inherit; }
+.prose blockquote { padding-left: 16px; border-left: 3px solid var(--hairline); }
+.prose hr { height: 0; border: 0; border-top: 1px solid var(--hairline); margin-block: 32px; }
+
+/* ---------- Footer ---------- */
+.foot { margin-top: 64px; border-top: 1px solid var(--hairline); }
+.foot-in {
+  list-style: none; margin-block: 0; padding: 20px 0 32px;
+  display: flex; flex-wrap: wrap; column-gap: 22px;
+}
+/* The website's footer links: orangeShadow, 700, 44 px targets, underlined on hover. */
+.foot-link {
+  display: inline-flex; align-items: center; min-height: 44px; min-width: 44px;
+  color: var(--orange-shadow); font: 700 15px/22px var(--font-body);
+  text-decoration: none;
+}
+.foot-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.foot-link[aria-current="page"] { color: var(--ink); }
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1080px) {
+  :root { --bar-h: 80px; }
+  .logo img { height: 40px; }
+  main { padding-top: 72px; }
+  .prose h1 { font-size: 56px; line-height: 60px; letter-spacing: -.035em; }
+  .prose h2 { font-size: 32px; line-height: 38px; }
+  .prose h3 { font-size: 23px; line-height: 29px; }
+  .prose > h1 + * { margin-top: 28px; }
+  .prose > * + h2 { margin-top: 64px; }
+  .prose > h2 + *, .prose > h3 + * { margin-top: 16px; }
+  .foot { margin-top: 96px; }
+  .foot-in { padding: 28px 0 48px; }
+  .foot-link { font-size: 16px; line-height: 23px; }
+}
