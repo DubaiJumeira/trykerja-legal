@@ -11,7 +11,7 @@ Kerja is a professional networking app for digital nomads, starting in Canggu, B
 
 Kerja is run by Zayd Benhacine, an independent developer ("Kerja", "we"). We are responsible for your personal data. Contact us at hello@trykerja.com.
 
-Last updated: 19 October 2026.
+Last updated: 20 October 2026.
 
 ## The short version
 
@@ -96,7 +96,7 @@ We collect only what the app needs to sign you in, show your profile to other me
 
 **What we don't collect.** No contacts, access to your photo library, camera, microphone, advertising ID or cross-app tracking.
 
-**Legal bases (EU and UK):** providing the service you asked for (account, profile, photo, check-ins, sessions, seats and waitlist places, areas, requests, chats with their delivered and read states, café answers); our legitimate interests (keeping members safe through the word filter, reports, bans and blocked periods; security; crash reports; statistics); your consent (location and notification permissions); and recording your acceptance of our terms.
+**Legal bases (EU and UK):** providing the service you asked for (account, profile, photo, check-ins, sessions, seats and waitlist places, areas, requests, chats with their delivered and read states, café answers); our legitimate interests (keeping members safe through the word filter, reports, bans and blocked periods; security; crash reports; statistics; answering your emails, waitlist emails included); your consent (location and notification permissions); and recording your acceptance of our terms.
 
 ## What other members see
 
@@ -123,12 +123,12 @@ These companies process data for us, each only for the job below. We don't sell 
 | Supabase | Database, photo storage and sign-in | Your account, profile, photos, check-ins, sessions, seats, waitlist places, café answers, areas, requests, chats and messages, read positions and read times, blocked periods, reports, ban fingerprints, notification tokens and the notification queue; your IP address with each request |
 | Resend | Sends sign-in code emails, and report alerts to us | Your email address and the code; for a report, its number, reason and time, and whether the reporter blocked the person |
 | Apple | Sign in with Apple; notifications to iPhones; TestFlight during the beta | Your sign-in; your phone's notification token and each notification's title and text, with the ID of the request, chat or session it's about; testers' feedback; your IP address |
-| Google | Sign in with Google; notifications to Android phones (Firebase Cloud Messaging); reCAPTCHA on the website's contact form | Your sign-in; on Android phones, a Firebase installation ID, your phone's notification token and each notification's title and text, with the ID of the request, chat or session it's about; your IP address |
-| Sentry | Crash reports | What failed, device model, system version, app version; IP address removed, no location, no account ID |
+| Google | Sign in with Google; notifications to Android phones (Firebase Cloud Messaging); our inbox (Gmail), where mail to hello@trykerja.com arrives | Your sign-in; on Android phones, a Firebase installation ID, your phone's notification token and each notification's title and text, with the ID of the request, chat or session it's about; your IP address; the emails you send us |
+| Sentry | Crash reports | What failed, and the last taps before it (the kind of element tapped, never what you wrote); the device model and an ID for the device; the system and kernel versions; the app's version and when it started; battery level and charging state, memory, language and region, screen size and orientation; IP address removed, no location, no account ID |
 | PostHog | Usage statistics | The events listed under Usage statistics (signed in, app opened, session joined, session attended, checked out, request sent, request accepted, message sent), each with the time it happened and its own random ID, a random install ID and a new random ID for each visit (these IDs also show when they were made), the device's maker, model and type, the system's name and version, whether it's an emulator, the app's name, identifier, version and build, the screen size, the language and timezone, the name and version of PostHog's code in the app, whether it's the live or the test app, and flags saying that you're not identified, that no profile is kept and that no location is looked up; a request for PostHog's settings when you sign in, and each time the app starts while you're signed in; your IP address with each request, discarded from the events |
 | Mapbox | Map images | Your IP address and the map area on screen; an anonymous usage count. Mapbox telemetry is off |
 | Expo | App updates and sending notifications | A random install ID, platform, app version, your IP address; if you turn notifications on, your notification token and each notification's title and text, with the ID of the request, chat or session it's about |
-| GoDaddy | Hosts trykerja.com | Website visits, contact-form messages and email-list sign-ups (see Website) |
+| GitHub | Hosts trykerja.com and legal.trykerja.com (GitHub Pages) | Visitors' IP addresses and the pages they ask for (see Website) |
 | ImprovMX | Forwards mail to hello@trykerja.com | The emails you send us |
 
 **Mapbox's own setting.** The map's (i) button includes Mapbox's telemetry choice. Kerja turns telemetry off; if you turn it on there, Mapbox collects data under its own privacy policy, and Kerja turns it off again the next time the app starts. Kerja never asks you to turn it on.
@@ -172,7 +172,7 @@ Your account, profile and settings stay until you delete your account; check-ins
 | Supabase service logs (with IP addresses) | Up to 7 days |
 | Crash reports | Up to 90 days |
 | Usage statistics | 1 year |
-| Emails to hello@trykerja.com | As long as needed to answer you |
+| Emails to hello@trykerja.com, waitlist emails included | As long as needed to answer you; for the waitlist, until we've invited you or you ask us to remove you |
 
 ## Your choices and rights
 
@@ -195,7 +195,7 @@ You can change your profile, photo and privacy choices, or delete your account a
 
 **Security.** Your sign-in on the phone is encrypted, with its key in the phone's secure storage. Data travels encrypted, and database rules let each person read only what they're allowed to see.
 
-**Website.** trykerja.com is hosted by GoDaddy. Its contact form collects your name, email address and message, which GoDaddy stores and forwards to us; if you tick its box, you also join our email list for updates and promotions, and you can unsubscribe at any time. Google's reCAPTCHA protects the form. We keep form messages as long as needed to answer you, and list sign-ups until you unsubscribe. The cookie banner lets you accept or decline cookies that measure traffic; GoDaddy's own privacy policy covers them. This policy itself is published at legal.trykerja.com, hosted by GitHub Pages, which receives visitors' IP addresses.
+**Website.** trykerja.com and legal.trykerja.com are hosted by GitHub Pages, which receives visitors' IP addresses and the pages they ask for. The website has no cookies, no analytics, no forms, and no scripts, fonts or images from other sites. "Join the waitlist" opens your own email app with a message to hello@trykerja.com that you can change; nothing is sent until you tap Send, and we keep it until we've invited you or you ask us to remove you. The WhatsApp button opens WhatsApp, under its own privacy policy, with a link to the website; the QR code holds only the website's address. The invite button opens Apple's TestFlight page.
 
 **Changes.** We update this page whenever the app starts collecting something new. The date at the top shows the last change, and from version 1.0.2 the app tells you when it changes.
 
