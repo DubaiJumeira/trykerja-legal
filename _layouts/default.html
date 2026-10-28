@@ -18,7 +18,6 @@
 {%- assign seo_page_title = page.title | default: site.title -%}
 {%- assign seo_url = page.url | absolute_url %}
 <title>{{ seo_title | escape }}</title>
-<meta name="generator" content="Jekyll v{{ jekyll.version }}">
 <meta property="og:title" content="{{ seo_page_title | escape }}">
 <meta property="og:locale" content="en_US">
 <link rel="canonical" href="{{ seo_url }}">
