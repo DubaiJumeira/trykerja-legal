@@ -1,4 +1,6 @@
 title: Kerja
+# No Pages theme (L7): the pages use _layouts/default.html and assets/kerja.css only.
+theme: null
 # README.md stays in the repo, off the site (L3). A custom exclude replaces Jekyll 3.10's own
 # list, so that list is repeated after it. CNAME isn't listed: it stays in the repo, where
 # Pages reads the domain.
