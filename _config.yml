@@ -1,1 +1,5 @@
 title: Kerja
+# README.md stays in the repo, off the site (L3). A custom exclude replaces Jekyll 3.10's own
+# list, so that list is repeated after it. CNAME isn't listed: it stays in the repo, where
+# Pages reads the domain.
+exclude: [README.md, Gemfile, Gemfile.lock, node_modules, vendor/bundle/, vendor/cache/, vendor/gems/, vendor/ruby/]
