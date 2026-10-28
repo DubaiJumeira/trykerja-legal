@@ -11,7 +11,7 @@ Kerja is a professional networking app for digital nomads, starting in Canggu, B
 
 Kerja is run by Zayd Benhacine, an independent developer (“Kerja”, “we”). We are responsible for your personal data. Contact us at hello@trykerja.com.
 
-Last updated: 23 October 2026.
+Last updated: 28 October 2026.
 
 ## The short version
 
@@ -22,13 +22,14 @@ Last updated: 23 October 2026.
 - **Chats are only between the two of you.** Once a request is accepted, you can message each other. Nobody else sees your messages, unless one of you reports a message to us. Your messages show as “Sent”, then “Delivered”. Kerja shows when you’ve read a message only if you both turn on “Show when I’ve read messages”, and never shows when you’re typing or whether you’re online.
 - **To keep Kerja safe,** our server refuses certain words, and we keep reports and bans as described below, even after an account is deleted.
 - **Notifications never contain what people write to you.** They only say who did what, for example “New message from Maya” or “Maya joined your session at Crate Café”. They’re off until you turn them on.
+- **The beta form on trykerja.com** keeps only what you type in it, for 6 months at most, and sends you one email to say we got it. You can ask us to delete it sooner.
 - **No selling, no ads, no tracking** across other apps or websites.
 - **Crash reports and statistics aren’t linked to your account:** no IP address, no location, no account ID.
 - **You can delete your account in the app** (Me → Settings → Delete account). It removes your data from our database and photo storage at once, including every message you sent and the sessions you hosted. The people you chatted with keep only their own messages. Reports and bans are kept for safety, as described below.
 
 ## What we collect and why
 
-We collect only what the app needs to sign you in, show your profile to other members, show who is at which café, in which session or around which area, pass on your requests and messages, and keep members safe.
+We collect only what the app needs to sign you in, show your profile to other members, show who is at which café, in which session or around which area, pass on your requests and messages, and keep members safe; and, on the website, only what you send in the beta form.
 
 | Data | Where it comes from | Why |
 |---|---|---|
@@ -60,6 +61,8 @@ We collect only what the app needs to sign you in, show your profile to other me
 | Sign-in sessions | Your phone: IP address and device type, per signed-in device | To keep you signed in and protect your account |
 | Crash reports | The app, when it fails | To fix bugs |
 | Usage statistics | The app: one event when you sign in, and seven events when you use the main features (see Usage statistics below) | To count sign-ins by method, and how often the main features are used |
+| Beta application (optional) | You, in the form on trykerja.com’s Join the beta page: your first name, email address, which fits you best (founder, content creator, freelancer or other), how long you’re in Canggu, and, if you add them, an Instagram or LinkedIn profile and what you’d work on next to someone; your confirmation that you’re 18 or older and that you’ve read this policy; the page’s language; and when you sent it. We add whether we’ve invited you | To choose who to invite to the beta, and to write to you about it |
+| Beta form limits | Our server, each time the form is sent and passes its checks: a scrambled form of the sender’s IP address and of the email address typed, and the time (see Beta applications below) | To limit how often the form can be sent from one connection or for one email address |
 
 **Location.** Kerja uses your location only while the app is open, and only if you allow it. The first time you open the map, Kerja explains why it asks; your phone’s own permission question follows only if you tap “Turn on location”. Your position stays in the phone’s memory: it centres the map, places your dot, gives distances to cafés and areas, suggests the nearest area, and checks that you’re at the café when you tap “Start working” or “I’m here” (Check in, in older versions of the app). For that check, Kerja reads your position once, or uses a reading the phone took in the last 2 minutes if it’s accurate to 100 metres, and checks that you’re within about 300 metres of the café, allowing for the reading’s own stated margin of error up to 100 metres; it needs precise location to be on. A recent reading can only let you in: if it doesn’t, the phone waits up to 10 seconds for a new one. Kerja never stores your position, its accuracy or your distance to the café, and never sends them to us or anyone else. “Start working” sends only the café, the end, the type, the number of seats and whether others can join, and our server sets the start; “I’m here”, and “Start working” where you already hold a seat there, send only the session. If you’re too far away, your phone tells you how far, and nothing is sent. Saying you’re around an area sends only the area’s name and, if you choose, what you’re up for; it doesn’t read your position, and neither does checking out. When the map shows the area around you, Mapbox delivers the map images for that area; it sees the area, not your position.
 
@@ -97,9 +100,11 @@ We collect only what the app needs to sign you in, show your profile to other me
 
 **Sign-in codes.** We keep only a scrambled form of each code, and it expires after one hour. There are no passwords.
 
+**Beta applications.** The Join the beta page on trykerja.com has a short form. When you tap Send application, the page sends what you typed to our database in Singapore; nothing is kept in your browser. We keep one application per email address: if you apply again with the same address, the first stays as it was. We read applications in our database. For each new application, Resend sends us a short alert with the application’s number, which fits you best, how long you’re in Canggu, the page’s language and the time; never your name, email address, profile link or what you wrote. For a new application, Resend also sends you one email from hello@mail.trykerja.com, in the page’s language, to say we got it. It greets you by your first name if that name is only letters, and contains nothing else you typed. Applying again with the same address sends no second email, and on a day when the form has already sent many emails it sends none; your application is kept all the same. When we invite you, we write to you ourselves from hello@trykerja.com. To stop the form being misused, each time it’s sent and passes its checks, our server keeps a scrambled form (a keyed hash) of the sender’s IP address and of the email address typed, with the time, for up to 25 hours, and refuses more than 5 sendings an hour from one connection or 3 a day for one email address. We can’t turn these back into an address, though we could check a guess against them. Your IP address is never stored with your application. Each application is deleted automatically 6 months after it was sent, or sooner if you ask us at hello@trykerja.com. Deleting a Kerja account doesn’t delete a beta application; ask us, or it goes after 6 months. You must be 18 or older to apply.
+
 **What we don’t collect.** No contacts, access to your photo library, camera (except to take your profile photo, if you choose to), microphone, advertising ID or cross-app tracking.
 
-**Legal bases (EU and UK):** providing the service you asked for (account, profile, photo, check-ins, sessions, seats, waitlist places and asks to join, areas, requests, chats with their delivered and read states, café answers); our legitimate interests (keeping members safe through the word filter, reports, bans and blocked periods; security; crash reports; statistics; answering your emails, waitlist emails included); your consent (location, camera and notification permissions); and recording your acceptance of our terms.
+**Legal bases (EU and UK):** providing the service you asked for (account, profile, photo, check-ins, sessions, seats, waitlist places and asks to join, areas, requests, chats with their delivered and read states, café answers), and handling the beta application you sent us; our legitimate interests (keeping members safe through the word filter, reports, bans and blocked periods; security, including the beta form’s limits; crash reports; statistics; answering your emails, waitlist emails included); your consent (location, camera and notification permissions); and recording your acceptance of our terms.
 
 ## What other members see
 
@@ -123,8 +128,8 @@ These companies process data for us, each only for the job below. We don’t sel
 
 | Provider | Job | What it receives |
 |---|---|---|
-| Supabase | Database, photo storage and sign-in | Your account, profile, photos, check-ins, sessions, seats, waitlist places, asks to join, café answers, areas, requests, chats and messages, read positions and read times, blocked periods, reports, ban fingerprints, notification tokens and the notification queue; your IP address with each request |
-| Resend | Sends sign-in code emails, and report alerts to us | Your email address and the code; for a report, its number, reason and time, and whether the reporter blocked the person |
+| Supabase | Database, photo storage and sign-in | Your account, profile, photos, check-ins, sessions, seats, waitlist places, asks to join, café answers, areas, requests, chats and messages, read positions and read times, blocked periods, reports, ban fingerprints, notification tokens and the notification queue; beta applications and the beta form’s scrambled limits; your IP address with each request |
+| Resend | Sends sign-in code emails, the beta form’s email to the person who applied, and report and beta application alerts to us | Your email address and the code; for the beta form’s email, the applicant’s email address and, if it’s only letters, their first name; for a report, its number, reason and time, and whether the reporter blocked the person; for a beta application, its number, which fits the person best, how long they’re in Canggu, the page’s language and the time |
 | Apple | Sign in with Apple; notifications to iPhones; TestFlight during the beta | Your sign-in; your phone’s notification token and each notification’s title and text, with the ID of the request, chat or session it’s about; testers’ feedback; your IP address |
 | Google | Sign in with Google; notifications to Android phones (Firebase Cloud Messaging); our inbox (Gmail), where mail to hello@trykerja.com arrives | Your sign-in; on Android phones, a Firebase installation ID, your phone’s notification token and each notification’s title and text, with the ID of the request, chat or session it’s about; your IP address; the emails you send us |
 | Sentry | Crash reports | What failed, and the last taps before it (the kind of element tapped, never what you wrote); the device model and an ID for the device; the system and kernel versions; the app’s version and when it started; battery level and charging state, memory, language and region, screen size and orientation; IP address removed, no location, no account ID |
@@ -140,13 +145,13 @@ When you sign in with Apple or Google, their own privacy policies apply to that 
 
 ## Where your data is stored
 
-Our database and your photos are in Singapore; crash reports and statistics stay in the EU. Sign-in code emails and report alerts go through Resend’s servers in Japan. Other providers above may process data in other countries, including the United States.
+Our database and your photos are in Singapore; crash reports and statistics stay in the EU. Sign-in code emails, the beta form’s email to applicants, and report and beta application alerts go through Resend’s servers in Japan. Other providers above may process data in other countries, including the United States.
 
 When data leaves the EU or the UK, we rely on our providers’ safeguards, such as the European Commission’s Standard Contractual Clauses. For users in Indonesia, we handle personal data in line with Law No. 27 of 2022 on Personal Data Protection.
 
 ## How long we keep it
 
-Your account, profile and settings stay until you delete your account; check-ins, sessions and seats go after 90 days; areas go the next day; reports and bans are kept for safety as below; logs, codes, crash reports and statistics expire on their own.
+Your account, profile and settings stay until you delete your account; check-ins, sessions and seats go after 90 days; areas go the next day; beta applications go after 6 months; reports and bans are kept for safety as below; logs, codes, crash reports and statistics expire on their own.
 
 | Data | Kept for |
 |---|---|
@@ -177,6 +182,8 @@ Your account, profile and settings stay until you delete your account; check-ins
 | Supabase service logs (with IP addresses) | Up to 7 days |
 | Crash reports | Up to 90 days |
 | Usage statistics | 1 year |
+| Beta applications | 6 months after each was sent, deleted automatically, or sooner if you ask us |
+| The beta form’s scrambled IP addresses and email addresses | Up to 25 hours |
 | Emails to hello@trykerja.com, waitlist emails included | As long as needed to answer you; for the waitlist, until we’ve invited you or you ask us to remove you |
 
 ## Your choices and rights
@@ -192,16 +199,17 @@ You can change your profile, photo and privacy choices, or delete your account a
 - **Apple or Google sign-in:** you can also remove Kerja’s access in your Apple ID or Google account settings.
 - **Location:** allow or refuse it in your phone’s settings at any time. Working at a café and “I’m here” need it, with precise location on; everything else works without it.
 - **Camera:** allow or refuse it in your phone’s settings at any time. Only taking your profile photo with the camera needs it; you can choose a photo from your library instead.
+- **Your beta application:** to change or withdraw it, email hello@trykerja.com from the address you applied with, and we’ll correct or delete it.
 - **Access, correction, a copy, objection or restriction:** email hello@trykerja.com. We answer within one month.
 - **Complaints:** you can complain to a data protection authority, for example the one in the country where you live.
 
 ## Age, security, website and changes
 
-**Age.** Kerja is for people 18 and over. If you’re under 18, please don’t use it.
+**Age.** Kerja is for people 18 and over. If you’re under 18, please don’t use it. The beta form asks you to confirm you’re 18 or older.
 
 **Security.** Your sign-in on the phone is encrypted, with its key in the phone’s secure storage. Data travels encrypted, and database rules let each person read only what they’re allowed to see.
 
-**Website.** trykerja.com and legal.trykerja.com are hosted by GitHub Pages, which receives visitors’ IP addresses and the pages they ask for. The website has no cookies, no analytics, no forms, and no scripts, fonts or images from other sites. “Join the waitlist” opens your own email app with a message to hello@trykerja.com that you can change; nothing is sent until you tap Send, and we keep it until we’ve invited you or you ask us to remove you. The WhatsApp button opens WhatsApp, under its own privacy policy, with a link to the website; the QR code holds only the website’s address. The invite button opens Apple’s TestFlight page.
+**Website.** trykerja.com and legal.trykerja.com are hosted by GitHub Pages, which receives visitors’ IP addresses and the pages they ask for. The website has no cookies, no analytics, and no scripts, fonts or images from other sites. Its one form, on the Join the beta page, sends what you type to our database only when you tap Send application (see Beta applications). Email links on the website open your own email app with a message to hello@trykerja.com; nothing is sent until you tap Send. The WhatsApp button opens WhatsApp, under its own privacy policy, with a link to the website; the QR code holds only the website’s address. The invite button opens Apple’s TestFlight page.
 
 **Changes.** We update this page whenever the app starts collecting something new. The date at the top shows the last change, and from version 1.0.2 the app tells you when it changes.
 
