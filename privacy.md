@@ -11,7 +11,7 @@ Kerja is a professional networking app for digital nomads, starting in Canggu, B
 
 Kerja is run by Zayd Benhacine, an independent developer (“Kerja”, “we”). We are responsible for your personal data. Contact us at hello@trykerja.com.
 
-Last updated: 29 October 2026.
+Last updated: 28 October 2026.
 
 ## The short version
 
