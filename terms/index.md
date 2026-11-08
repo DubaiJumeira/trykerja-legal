@@ -5,7 +5,7 @@ permalink: /terms/
 
 # Kerja — Terms of use
 
-Last updated: [the day it's published].
+Last updated: 8 November 2026.
 
 ## 1. About Kerja
 
